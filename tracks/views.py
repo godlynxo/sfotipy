@@ -1,11 +1,8 @@
-from django.http import HttpResponse, Http404
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
 
 from .models import Track
 
 def tracks(request, title):
-    try:
-        track = Track.objects.get(title=title)
-    except Track.DoesNotExist:
-        raise Http404
+    track = get_object_or_404(Track, title=title)
     return HttpResponse(track)
