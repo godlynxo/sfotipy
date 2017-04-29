@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from tracks import views as track_views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^tracks/(?P<title>[\w\-]+)/', track_views.tracks, name='track_view'),
 ]

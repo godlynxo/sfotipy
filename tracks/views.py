@@ -1,3 +1,11 @@
+from django.http import HttpResponse, Http404
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Track
+
+def tracks(request, title):
+    try:
+        track = Track.objects.get(title=title)
+    except Track.DoesNotExist:
+        raise Http404
+    return HttpResponse(track)
