@@ -7,6 +7,9 @@ from artists.models import Artist
 class Track(models.Model):
     title = models.CharField(max_length=255)
     order = models.PositiveIntegerField()
-    track_file = models.FileField(upload_to='tracks')
+    track_file = models.FileField(upload_to='tracks/songs')
     album = models.ForeignKey(Album)
     artist = models.ForeignKey(Artist)
+
+    def __str__(self):
+        return self.title

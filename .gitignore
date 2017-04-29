@@ -18,3 +18,5 @@ build/
 tests/report/
 
 *.sqlite3
+songs/
+covers/
