@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <p>
+    <strong>Title: </strong> {{track.title}}
+  </p>
+  <p>
+    <strong>Order: </strong> {{track.order}}
+  </p>
+  <p>
+    <strong>Track file: </strong> {{track.track_file}}
+  </p>
+  <p>
+    <strong>Album: </strong> {{track.album}}
+  </p>
+  <p>
+    <strong>Artist: </strong> {{track.artist}} <br>
+    <strong>Bio: </strong> {{track.artist.biography}}
+  </p>
+{% endblock %}

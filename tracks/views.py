@@ -1,8 +1,7 @@
-from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 
 from .models import Track
 
 def tracks(request, title):
     track = get_object_or_404(Track, title=title)
-    return HttpResponse(track)
+    return render(request, 'tracks.html', { 'track': track})
