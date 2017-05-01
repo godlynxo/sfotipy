@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^tracks/(?P<title>[\w\-]+)/', track_views.tracks, name='track_view'),
     url(r'^signup/', userprofile_views.signup, name='signup'),
+    url(r'^signin/', userprofile_views.signin, name='signin'),
 ]
