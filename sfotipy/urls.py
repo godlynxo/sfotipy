@@ -17,8 +17,10 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from tracks import views as track_views
+from userprofiles import views as userprofile_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^tracks/(?P<title>[\w\-]+)/', track_views.tracks, name='track_view'),
+    url(r'^signup/', userprofile_views.signup, name='signup'),
 ]

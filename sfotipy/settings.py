@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'artists',
     'albums',
     'tracks',
+    'userprofiles',
 ]
 
 MIDDLEWARE = [
